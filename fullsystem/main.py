@@ -153,7 +153,7 @@ def main():
     atexit.register(gpio_cleanup)
     
     parser = argparse.ArgumentParser(description="Computer Vision Vault - Raspberry Pi Security System")
-    parser.add_argument('pin', type=int, help='Enter 3 digit PIN (100-999)')
+    parser.add_argument('pin', type=int, nargs='?', default=123, help='Enter 3 digit PIN (100-999), default is 123')
     args = parser.parse_args()
     
     # Validate PIN
